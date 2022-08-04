@@ -1,17 +1,25 @@
-import Expenses from "./components/Expenses"
+import Expenses from "./components/Expenses/Expenses"
+import NewExpense from "./components/NewExpenses/NewExpense";
 import './App.css'
 
 function App() {
   let expenses = [
-    {title: "My Birthday party", amount : 2050, date: new Date(2022,5,14)},
-    {title: "Bangalore Trip", amount : 10000, date: new Date(2022,5,1)},
-    {title: "Kashmir Trip", amount : 95000, date: new Date(2022,2,14)},
-    {title: "Yercaud Trip", amount : 1200, date: new Date(2022,5,14)},
-    {title: "hospital Medicine", amount : 750, date: new Date(2022,4,14)},
-  ]
+    {title: "party", amount : 2050, date: new Date(2022,5,14)},
+    {title: "Investment", amount : 10000, date: new Date(2022,5,1)},
+    {title: "Tour & Travel", amount : 95000, date: new Date(2022,2,14)},
+    {title: "Essentials", amount : 1200, date: new Date(2022,5,14)},
+    {title: "hospital", amount : 750, date: new Date(2022,4,14)},
+  ];
+
+  // handling Data from NewExpense
+  const addExpenseHandler = expense => {
+    console.log("in App.js")
+    console.log(expense)
+  }
+
   return (
     <div >
-      <h1>Let gets starts</h1>
+      <NewExpense onAddExpense = {addExpenseHandler} />
       <Expenses item = {expenses} ></Expenses>
     </div>
   );
