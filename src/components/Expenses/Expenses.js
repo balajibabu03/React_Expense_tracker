@@ -7,8 +7,6 @@ function Expenses(props) {
     // initially selected year - 2 way binding
     const [filteredYear, setFilteredYear] = useState('2022')
     const filterChangeHandler = (selectedYear) =>{
-        console.log("IN Expenses.js");
-        console.log(selectedYear);
         setFilteredYear(selectedYear)
     };
 

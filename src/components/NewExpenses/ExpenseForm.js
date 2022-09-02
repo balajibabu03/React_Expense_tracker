@@ -18,7 +18,7 @@ const ExpenseForm = (props) =>{
         // setUserInput({
         //     ...userInput, enteredTitle : event.target.value
         // })
-        // // When state update based on previous state - USE FUNCTION SYNTAX
+        // // When state update based on previous state - USE FUNCTION SYNTAX ******IMPORTANT****** 
         // setUserInput((prevState)=>{
         //     return { ...prevState, enteredTitle: event.target.value }
         // })
@@ -38,7 +38,7 @@ const ExpenseForm = (props) =>{
     }
 
     const submitHandler = (event)=>{
-        // To overcome, the page reload, we use prevent  default function that keep our page without reloading it. 
+        // To overcome, the page reload, we use prevent default function that keep our page without reloading it. 
         event.preventDefault();
         const expenseData ={
             title: enteredTitle,
